@@ -15,8 +15,7 @@ case $1 in
         PARAMS=`echo $* | awk '{print $2 " " $3 " " $4}'`
         echo $PARAMS
         bash ./setup.sh $PARAMS
-        echo "Setup done."
-        echo "You can start the validator by running $0 start"
+        [ $? -eq 0 ] && echo "You can start the validator by running $0 start"
         ;;
     start)
         validatorInstance

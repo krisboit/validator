@@ -104,3 +104,5 @@ if test -f "./blockchains/$1/$2/setup.sh"; then
     sectionLog "Running $2 setup"
     sh ./blockchains/$1/$2/setup.sh
 fi
+
+echo "Setup done."
