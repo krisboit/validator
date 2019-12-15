@@ -6,3 +6,8 @@ apt-cache policy docker-ce
 sudo apt install -y docker-ce
 sudo systemctl status docker
 sudo usermod -aG docker ${USER}
+
+# clone nearcore
+cd ~/
+git clone https://github.com/nearprotocol/nearcore.git
+
