@@ -104,7 +104,3 @@ if test -f "./blockchains/$1/$2/setup.sh"; then
     sectionLog "Running $2 setup"
     sh ./blockchains/$1/$2/setup.sh
 fi
-
-# start validator
-sectionLog "Starting $3 on $1 $2"
-sh ./blockchains/$1/$2/start.sh

@@ -14,14 +14,16 @@ case $1 in
     setup)
         PARAMS=`echo $* | awk '{print $2 " " $3 " " $4}'`
         echo $PARAMS
-        sh ./setup.sh $PARAMS
+        bash ./setup.sh $PARAMS
+        echo "Setup done."
+        echo "You can start the validator by running $0 start"
         ;;
     start)
         validatorInstance
-        sh ./start.sh $PARAMS
+        bash ./start.sh $PARAMS
         ;;
     stop)
         validatorInstance
-        sh ./stop.sh $PARAMS
+        bash ./stop.sh $PARAMS
         ;;    
 esac

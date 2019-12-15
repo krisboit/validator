@@ -3,6 +3,7 @@ sudo apt install -y apt-transport-https ca-certificates curl software-properties
 
 # checkout repo
 cd ~/
+rm -rf validator
 git clone https://github.com/krisboit/validator.git
 
 # add in path
