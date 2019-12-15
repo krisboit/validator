@@ -1,0 +1,27 @@
+#!/bin/bash
+cd "${BASH_SOURCE%/*}"
+
+function validatorInstance() {
+    if [ -f ./validator.instance ]; then 
+        PARAMS=`cat validator.instance`
+    else 
+        echo 'You need to run setup first.'
+        exit 1
+    fi 
+}
+
+case $1 in 
+    setup)
+        PARAMS=`echo $* | awk '{print $2 " " $3 " " $4}'`
+        echo $PARAMS
+        sh ./setup.sh $PARAMS
+        ;;
+    start)
+        validatorInstance
+        sh ./start.sh $PARAMS
+        ;;
+    stop)
+        validatorInstance
+        sh ./stop.sh $PARAMS
+        ;;    
+esac

@@ -1,0 +1,1 @@
+echo "stakewars starting..."
